@@ -20,8 +20,35 @@ class Head {
     let topPosition = Number(head.style.top.replace('px', ''));
     let leftPosition = Number(head.style.left.replace('px', ''));
 
+    // position movements depending on direction
     if (direction === 'right') {
       head.style.left = `${(leftPosition += 50)}px`;
+      if (leftPosition >= 700) {
+        alert('game end');
+        return;
+      }
+    }
+    if (direction === 'left') {
+      head.style.left = `${(leftPosition -= 50)}px`;
+      //checkApple(topPosition, leftPosition)
+      if (leftPosition <= -50) {
+        alert('game end');
+        return;
+      }
+    }
+    if (direction === 'up') {
+      head.style.top = `${(topPosition -= 50)}px`;
+      if (topPosition <= -50) {
+        alert('game end');
+        return;
+      }
+    }
+    if (direction === 'down') {
+      head.style.top = `${(topPosition += 50)}px`;
+      if (topPosition >= 700) {
+        alert('game end');
+        return;
+      }
     }
 
     setTimeout(this.move.bind(this), this.SPEED);
