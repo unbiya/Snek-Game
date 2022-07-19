@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   const body = document.querySelector('body');
   const board = document.querySelector('#board');
+  const score = document.createElement('h1');
+  let counter = 0;
+  score.textContent = `Score: ${counter}`;
+  document.body.appendChild(score);
 
   const head = new Head(board);
   const apple = new Apple(board);
@@ -16,10 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (head.node.style.top === apple.node.style.top && head.node.style.left === apple.node.style.left) {
       apple.position();
       tail = new Body(board, tail);
+      score.textContent = `Score: ${++counter}`;
     }
   }
 
-  setInterval(eat, 250);
+  setInterval(eat, head.SPEED);
 
   // body.onclick = () => apple.position();
 

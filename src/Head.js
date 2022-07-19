@@ -26,6 +26,7 @@ class Head {
       head.style.left = `${(leftPosition += 50)}px`;
       if (leftPosition >= 700) {
         alert('game end');
+        head.style.left = `${leftPosition -= 50}px`;
         return;
       }
     }
@@ -34,6 +35,7 @@ class Head {
       //checkApple(topPosition, leftPosition)
       if (leftPosition <= -50) {
         alert('game end');
+        head.style.left = `${leftPosition += 50}px`;
         return;
       }
     }
@@ -41,6 +43,7 @@ class Head {
       head.style.top = `${(topPosition -= 50)}px`;
       if (topPosition <= -50) {
         alert('game end');
+        head.style.top = `${topPosition += 50}px`;
         return;
       }
     }
@@ -48,6 +51,7 @@ class Head {
       head.style.top = `${(topPosition += 50)}px`;
       if (topPosition >= 700) {
         alert('game end');
+        head.style.top = `${topPosition -= 50}px`;
         return;
       }
     }
