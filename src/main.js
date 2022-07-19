@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // console.log(`Snake Top: ${head.node.style.top}, Snake Left: ${head.node.style.left}`);
     //check if the position of head and apple are the same
     if (head.node.style.top === apple.node.style.top && head.node.style.left === apple.node.style.left) {
-      console.log('Ate apple');
+      apple.position();
     }
     
   }
 
-  // setInterval(eat, 250);
+  setInterval(eat, 250);
 
   // body.onclick = () => apple.position();
 
