@@ -16,7 +16,6 @@ class Head {
   move() {
     const head = this.node;
     const direction = this.currentDirection;
-
     let topPosition = Number(head.style.top.replace('px', ''));
     let leftPosition = Number(head.style.left.replace('px', ''));
 

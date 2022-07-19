@@ -20,7 +20,7 @@ class Apple {
 // output: returns a string
 function randomPosition() {
   // declare a const number, assign to output of invoking random method
-  const number = Math.floor(Math.random() * 650);
+  const number = 50 * Math.floor(Math.random() * (650/50 + 1));
   // return a string which is number concatenated with px
   return `${number}px`;
 }
