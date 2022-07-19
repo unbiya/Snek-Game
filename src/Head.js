@@ -18,6 +18,8 @@ class Head {
     const direction = this.currentDirection;
     let topPosition = Number(head.style.top.replace('px', ''));
     let leftPosition = Number(head.style.left.replace('px', ''));
+    this.prevLeft = leftPosition;
+    this.prevTop = topPosition;
 
     // position movements depending on direction
     if (direction === 'right') {
