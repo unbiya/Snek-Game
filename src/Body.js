@@ -5,7 +5,7 @@ class Body {
       el.appendChild(this.node);
       
       this.previous = segment;
-      this.currentDirection = this.previous.currentDirection;
+      //this.currentDirection = this.previous.currentDirection;
       this.SPEED = this.previous.speed;
       this.node.style.top = this.previous.prevTop;
       this.node.style.left = this.previous.prevLeft;
@@ -16,18 +16,17 @@ class Body {
   
     move() {
       const body = this.node;
-      const direction = this.currentDirection = this.previous.currentDirection;
+      //const direction = this.currentDirection = this.previous.currentDirection;
       
       let topPosition = this.previous.prevTop;
     //   Number(this.previous.node.style.top.replace('px', ''));
       let leftPosition = this.previous.prevLeft;
     //   Number(this.previous.node.style.left.replace('px', ''));
-      
+      this.prevTop = topPosition;
+      this.prevLeft = leftPosition;  
+
       body.style.left = `${leftPosition}px`;
       body.style.top = `${topPosition}px`;
-
-      this.prevTop = topPosition;
-      this.prevLeft = leftPosition;
   
       // position movements depending on direction
     //   if (direction === 'right') {

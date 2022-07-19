@@ -6,6 +6,7 @@ class Apple {
 
     el.appendChild(this.node);
 
+    //this.position();
     this.node.style.left = randomPosition();
     this.node.style.top = randomPosition();
   }

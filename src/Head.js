@@ -2,6 +2,7 @@ class Head {
   constructor(el) {
     this.node = document.createElement('div');
     this.node.setAttribute('id', 'head');
+    // this.node.setAttribute('src', 'src/assets/snake.jpg');
     el.appendChild(this.node);
 
     this.currentDirection = 'right';

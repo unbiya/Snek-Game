@@ -14,19 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // setInterval(eat, speed);
   let tail = head;
   function eat() {
-    // console.log(`Apple Top: ${apple.node.style.top}, Apple Left: ${apple.node.style.left}`);
-    // console.log(`Snake Top: ${head.node.style.top}, Snake Left: ${head.node.style.left}`);
     //check if the position of head and apple are the same
     if (head.node.style.top === apple.node.style.top && head.node.style.left === apple.node.style.left) {
+      // send apple to random new position 
       apple.position();
+      // create new body passing in el and previous segment
       tail = new Body(board, tail);
       score.textContent = `Score: ${++counter}`;
     }
   }
 
   setInterval(eat, head.SPEED);
-
-  // body.onclick = () => apple.position();
 
   body.addEventListener('keydown', (e) => {
     if (e.code === 'ArrowLeft' && head.currentDirection !== 'right') {
@@ -47,3 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+  // console.log(`Apple Top: ${apple.node.style.top}, Apple Left: ${apple.node.style.left}`);
+    // console.log(`Snake Top: ${head.node.style.top}, Snake Left: ${head.node.style.left}`);
+    
+
+  // body.onclick = () => apple.position();
