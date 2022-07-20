@@ -1,8 +1,8 @@
 class Head {
   constructor(el) {
-    this.node = document.createElement('div');
+    this.node = document.createElement('img');
     this.node.setAttribute('id', 'head');
-    // this.node.setAttribute('src', 'src/assets/snake.jpg');
+    this.node.setAttribute('src', 'src/assets/snake.jpg');
     el.appendChild(this.node);
 
     this.currentDirection = null;
