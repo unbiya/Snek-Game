@@ -5,11 +5,11 @@ class Head {
     // this.node.setAttribute('src', 'src/assets/snake.jpg');
     el.appendChild(this.node);
 
-    this.currentDirection = 'right';
+    this.currentDirection = null;
     this.SPEED = 250;
 
-    this.node.style.top = 0;
-    this.node.style.left = 0;
+    this.node.style.top = '0px';
+    this.node.style.left = '0px';
 
     setTimeout(this.move.bind(this), this.SPEED);
   }

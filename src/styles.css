@@ -1,4 +1,12 @@
-#head, .body {
+#head {
+  background: black;
+  height: 50px;
+  width: 50px;
+  background-color: green;
+  position: absolute;
+}
+
+.body {
   background: black;
   height: 50px;
   width: 50px;
