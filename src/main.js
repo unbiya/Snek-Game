@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // create new body passing in el and previous segment
       tail = new Body(board, tail);
       score.textContent = `Score: ${++counter}`;
-      head.SPEED -= 10;
+      head.SPEED -= 10; //speed increases
       console.log('speed', head.SPEED);
     }
   }
