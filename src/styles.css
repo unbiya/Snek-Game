@@ -19,6 +19,7 @@
   width: 700px;
   border: 1px black solid;
   position: relative;
+  background-image: url(assets/dirt.jpeg);
 }
 
 #apple {

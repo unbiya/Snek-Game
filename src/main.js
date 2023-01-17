@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM loaded')
   const body = document.querySelector('body');
   const board = document.querySelector('#board');
   const score = document.createElement('h1');
@@ -21,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // create new body passing in el and previous segment
       tail = new Body(board, tail);
       score.textContent = `Score: ${++counter}`;
+      head.SPEED -= 10;
+      console.log('speed', head.SPEED);
     }
   }
 
