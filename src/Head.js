@@ -12,10 +12,12 @@ class Head {
     this.node.style.left = '0px';
 
     setTimeout(this.move.bind(this), this.SPEED);
+    //'this' in constructor refers to head
+    //.bind(this) sets 'this' in move function as 'this' in constructor, which is head
   }
 
   move() {
-    const head = this.node;
+    const head = this.node; //head.node
     const direction = this.currentDirection;
     let topPosition = Number(head.style.top.replace('px', ''));
     let leftPosition = Number(head.style.left.replace('px', ''));
